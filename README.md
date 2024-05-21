@@ -5,14 +5,23 @@ Chatbot
 A simple QA chatbot, built on both self-created dataset and web scrapped dataset.
 
 Input: My dataset
-                                                   My dataset                                                                                                            Output/UI
+                                                                                                                                                        
+My dataset     
+
+
+
+Output/UI
     
-  ![ui_self](https://github.com/BiswarupGitHub/Tensorflow/assets/94214011/fc16d2dd-a58a-4fae-85a7-05b9915e4387)               ![self_designed](https://github.com/BiswarupGitHub/Tensorflow/assets/94214011/5f8909ec-3c04-466f-ab26-518351739e72)
 
          
 
 Input: Web scrapped
-                                                  Scrapped dataset                                                                                                         Output/UI
+  
+Scrapped dataset                
+  
+  
+  
+Output/UI
            
 
 
