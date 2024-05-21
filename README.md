@@ -1,5 +1,3 @@
-![ui_self](https://github.com/BiswarupGitHub/Tensorflow/assets/94214011/9accb84b-657e-4960-890f-aba75441646d)[biswarup_report.pdf](h
-
 Chatbot
 
 A simple QA chatbot, built on both self-created dataset and web scrapped dataset.
