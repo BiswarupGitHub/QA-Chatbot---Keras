@@ -41,18 +41,18 @@ Structure:
 
 3.	train_model.ipynb
 
-4.	app
+4.	app/
 a.	model.py
 b.	preprocess.py
 
-5.	data
+6.	data/
 a.	my.csv
 b.	scrap.csv
 
-6.	static
+8.	static/
 a.	style.css
 
-7.	templates
+10.	templates/
 a.	index.html
 
 
