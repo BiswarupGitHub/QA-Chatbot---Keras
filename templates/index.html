@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>QA Chatbot</title>
+    <link rel="stylesheet" href="{{ url_for('static', filename='style.css') }}">
+</head>
+<body>
+    <div class="container">
+        <h1>Welcome !!</h1>
+        <form id="qa-form">
+            <label for="question">Hi, I am Biswarup. Ask me anything</label>
+            <input type="text" id="question" name="question" required>
+            <button type="submit">Submit</button>
+        </form>
+        <div id="response">
+            <h2>Response:</h2>
+            <div id="qa-history"></div>
+        </div>
+    </div>
+    <script>
+        document.getElementById('qa-form').addEventListener('submit', function(event) {
+            event.preventDefault();
+            var question = document.getElementById('question').value;
+            fetch('/get_answer', {
+                method: 'POST',
+                headers: {
+                    'Content-Type': 'application/json'
+                },
+                body: JSON.stringify({question: question})
+            })
+            .then(response => response.json())
+            .then(data => {
+                var qaHistory = document.getElementById('qa-history');
+                var questionAnswerPair = document.createElement('div');
+                questionAnswerPair.classList.add('qa-pair');
+                questionAnswerPair.innerHTML = `<p><strong>Question:</strong> ${data.question}</p><p><strong>Answer:</strong> ${data.answer}</p>`;
+                qaHistory.appendChild(questionAnswerPair);
+            })
+            .catch(error => console.error('Error:', error));
+        });
+    </script>
+</body>
+</html>
