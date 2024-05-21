@@ -31,7 +31,9 @@ Output/UI
 
 
 Framework: Keras
+
 UI: Web UI
+
 Structure:
 1.	main.py
 
